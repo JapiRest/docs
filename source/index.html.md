@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: JAPI.rest — The general API
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -8,8 +8,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
+  - <a href='https://key.japi.rest'>Register an API key</a>
 
 includes:
   - errors
