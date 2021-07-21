@@ -319,6 +319,12 @@
                     <a href="#get-user" class="toc-h2 toc-link" data-title="Get User">Get User</a>
                   </li>
                   <li>
+                    <a href="#get-user-avatar" class="toc-h2 toc-link" data-title="Get User Avatar">Get User Avatar</a>
+                  </li>
+                  <li>
+                    <a href="#get-user-banner" class="toc-h2 toc-link" data-title="Get User Banner">Get User Banner</a>
+                  </li>
+                  <li>
                     <a href="#get-template" class="toc-h2 toc-link" data-title="Get Template">Get Template</a>
                   </li>
               </ul>
@@ -393,6 +399,104 @@
 <td>The user&#39;s ID.</td>
 </tr>
 </tbody></table>
+<h2 id='get-user-avatar'>Get User Avatar</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId/avatar"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
+<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user/:userId/avatar</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>This endpoint is designed for web pages and uses client-side redirection.</p>
+</blockquote>
+
+<p>This endpoint retrieves a user&#39;s avatar.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://japi.rest/discord/v1/user/:userId/avatar</code></p>
+<h3 id='path-parameters-2'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userId</td>
+<td>true</td>
+<td>The user&#39;s ID.</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>animated</td>
+<td>false</td>
+<td>false</td>
+<td>Returns the avatar as gif if available.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>false</td>
+<td>128</td>
+<td>Changes the size of the image, same as discord.</td>
+</tr>
+</tbody></table>
+<h2 id='get-user-banner'>Get User Banner</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId/banner"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
+<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user/:userId/banner</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>This endpoint is designed for web pages and uses client-side redirection.</p>
+</blockquote>
+
+<p>This endpoint retrieves a user&#39;s banner.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://japi.rest/discord/v1/user/:userId/banner</code></p>
+<h3 id='path-parameters-3'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userId</td>
+<td>true</td>
+<td>The user&#39;s ID.</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>animated</td>
+<td>false</td>
+<td>false</td>
+<td>Returns the avatar as gif if available.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>false</td>
+<td>128</td>
+<td>Changes the size of the image, same as discord.</td>
+</tr>
+</tbody></table>
 <h2 id='get-template'>Get Template</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/template/:code"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
@@ -444,9 +548,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves a template&#39;s information.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET https://japi.rest/discord/v1/template/:code</code></p>
-<h3 id='path-parameters-2'>Path Parameters</h3>
+<h3 id='path-parameters-4'>Path Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
