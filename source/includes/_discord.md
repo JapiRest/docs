@@ -28,7 +28,8 @@ console.log(data);
     "banner": null,
     "banner_color": "#19b9e6",
     "accent_color": 1685990,
-    "avatarURL": "https://cdn.discordapp.com/avatars/209796601357533184/49e7de8406d75a012d9add3b0383d428.png"
+    "avatarURL": "https://cdn.discordapp.com/avatars/209796601357533184/49e7de8406d75a012d9add3b0383d428.png",
+    "bannerURL": null,
   }
 }
 ```
@@ -54,12 +55,12 @@ curl "https://japi.rest/discord/v1/template/:code" \
 
 ```javascript
 const fetch = require('node-fetch'); // NodeJS users
-const data = fetch("https://japi.rest/discord/v1/template/:code", { headers: { "Authorization": "{API KEY}"}}).then(res => res.json())
+const data = fetch("https://japi.rest/discord/v1/template/:code", {
+  headers: { "Authorization": "{API KEY}" }
+}).then(res => res.json())
 
 console.log(data);
 ```
-
-> Make sure to replace {API KEY} with your actual API key.
 
 > The above command returns JSON structured like this:
 
