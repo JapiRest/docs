@@ -291,7 +291,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -302,8 +302,6 @@
       <img src="images/logo-86873d04.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
@@ -315,10 +313,18 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#discord" class="toc-h1 toc-link" data-title="Discord">Discord</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-user" class="toc-h2 toc-link" data-title="Get User">Get User</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#example-include" class="toc-h1 toc-link" data-title="Example include">Example include</a>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
         <ul class="toc-footer">
@@ -334,7 +340,55 @@
 <aside class="warning">
   JAPI is still in early development and is not suitable for production envirements!
 </aside>
-<h1 id='errors'>Errors</h1>
+<h1 id='discord'>Discord</h1><h2 id='get-user'>Get User</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user?id=:userId"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {API KEY}"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user?id=:userId</span><span class="dl">"</span><span class="p">)</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">Bearer {API KEY}</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replaxe {API KEY} with your actual API key.</p>
+
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">":userId"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">":username"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"discriminator"</span><span class="p">:</span><span class="w"> </span><span class="s2">":discriminator"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">":avatar"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">":created_at"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">":bio"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"default_avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">":default_avatar"</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a user&#39;s information.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://japi.rest/discord/v1/user?id=:userId</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>The user&#39;s ID.</td>
+</tr>
+</tbody></table>
+<h1 id='example-include'>Example include</h1>
+<aside class="notice">
+Eh
+</aside>
+
+<p>eh</p>
+<div class="highlight"><pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">eh</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">eh</span><span class="dl">"</span>
+</code></pre></div><h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
@@ -392,20 +446,11 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 <td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
-<h1 id='example-include'>Example include</h1>
-<aside class="notice">
-Eh
-</aside>
 
-<p>eh</p>
-<div class="highlight"><pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">eh</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">eh</span><span class="dl">"</span>
-</code></pre></div>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
