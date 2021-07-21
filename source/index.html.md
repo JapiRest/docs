@@ -10,7 +10,7 @@ toc_footers:
 
 includes:
   - discord
-  - example
+  - wikihow
   - errors
 
 search: true
