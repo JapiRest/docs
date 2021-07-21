@@ -3,13 +3,16 @@
 ## Search
 
 ```shell
-curl "https://japi.rest/wikihow/v1/search?q=How+to+eat+food"
+curl "https://japi.rest/wikihow/v1/search?q=How+to+eat+food" \
+  -H "Authorization: {API KEY}"
 ```
 
 ```javascript
 const fetch = require('node-fetch'); // NodeJS users
 const search = 'How to eat food';
-const data = fetch(`https://japi.rest/wikihow/v1/search/?q=${search}`).then(res => res.json())
+const data = fetch(`https://japi.rest/wikihow/v1/search/?q=${search}`, {
+  headers: { "Authorization": "{API KEY}" }
+}).then(res => res.json())
 
 console.log(data);
 ```
