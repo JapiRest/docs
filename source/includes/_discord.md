@@ -46,6 +46,75 @@ Parameter | Required | Description
 --------- | -------- | -----------
 userId    | true     | The user's ID.
 
+## Get User Avatar
+
+```shell
+curl "https://japi.rest/discord/v1/user/:userId/avatar"
+```
+
+```javascript
+const fetch = require('node-fetch'); // NodeJS users
+const data = fetch("https://japi.rest/discord/v1/user/:userId/avatar").then(res => res.url)
+
+console.log(data);
+```
+
+> This endpoint is designed for web pages and uses client-side redirection.
+
+This endpoint retrieves a user's avatar.
+
+### HTTP Request
+
+`GET https://japi.rest/discord/v1/user/:userId/avatar`
+
+### Path Parameters
+
+Parameter | Required | Description
+--------- | -------- | -----------
+userId    | true     | The user's ID.
+
+### Query Parameters
+
+Parameter | Required | Default | Description
+--------- | -------- | ------- | -----------
+animated  | false    | false   | Returns the avatar as gif if available.
+size      | false    | 128     | Changes the size of the image, same as discord.
+
+## Get User Banner
+
+```shell
+curl "https://japi.rest/discord/v1/user/:userId/banner"
+```
+
+```javascript
+const fetch = require('node-fetch'); // NodeJS users
+const data = fetch("https://japi.rest/discord/v1/user/:userId/banner").then(res => res.url)
+
+console.log(data);
+```
+
+> This endpoint is designed for web pages and uses client-side redirection.
+
+This endpoint retrieves a user's banner.
+
+### HTTP Request
+
+`GET https://japi.rest/discord/v1/user/:userId/banner`
+
+### Path Parameters
+
+Parameter | Required | Description
+--------- | -------- | -----------
+userId    | true     | The user's ID.
+
+### Query Parameters
+
+Parameter | Required | Default | Description
+--------- | -------- | ------- | -----------
+animated  | false    | false   | Returns the avatar as gif if available.
+size      | false    | 128     | Changes the size of the image, same as discord.
+
+
 ## Get Template
 
 ```shell
