@@ -3,12 +3,12 @@
 ## Get User
 
 ```shell
-curl "https://japi.rest/discord/v1/user?id=:userId" \
+curl "https://japi.rest/discord/v1/user/:userId" \
   -H "Authorization: Bearer {API KEY}"
 ```
 
 ```javascript
-const data = fetch("https://japi.rest/discord/v1/user?id=:userId")
+const data = fetch("https://japi.rest/discord/v1/user/:userId")
 
 let api = kittn.authorize('Bearer {API KEY}');
 let kittens = api.kittens.get();
@@ -36,7 +36,7 @@ This endpoint retrieves a user's information.
 
 ### HTTP Request
 
-`GET https://japi.rest/discord/v1/user?id=:userId`
+`GET https://japi.rest/discord/v1/user/:userId`
 
 ### Query Parameters
 
