@@ -324,7 +324,12 @@
               </ul>
           </li>
           <li>
-            <a href="#example-include" class="toc-h1 toc-link" data-title="Example include">Example include</a>
+            <a href="#wikihow" class="toc-h1 toc-link" data-title="WikiHow">WikiHow</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#search" class="toc-h2 toc-link" data-title="Search">Search</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
@@ -455,14 +460,68 @@
 <td>The template code.</td>
 </tr>
 </tbody></table>
-<h1 id='example-include'>Example include</h1>
-<aside class="notice">
-Eh
-</aside>
+<h1 id='wikihow'>WikiHow</h1><h2 id='search'>Search</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/wikihow/v1/search?q=How+to+eat+food"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
+<span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">How to eat food</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://japi.rest/wikihow/v1/search/?q=</span><span class="p">${</span><span class="nx">search</span><span class="p">}</span><span class="s2">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
 
-<p>eh</p>
-<div class="highlight"><pre class="highlight javascript"><code><span class="kd">let</span> <span class="nx">eh</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">eh</span><span class="dl">"</span>
-</code></pre></div><h1 id='errors'>Errors</h1>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"How to Write Software Documentation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/Write-Software-Documentation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/f/fd/Write-Software-Documentation-Step-8.jpg/-crop-250-145-193px-Write-Software-Documentation-Step-8.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"views"</span><span class="p">:</span><span class="w"> </span><span class="mi">303499</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"last_updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Updated 6 months ago"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"How to Write a Business Process Document"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/Write-a-Business-Process-Document"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/4/4e/Apply-for-Unemployment-Compensation-in-Florida-Step-18.jpg/-crop-250-145-193px-Apply-for-Unemployment-Compensation-in-Florida-Step-18.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"views"</span><span class="p">:</span><span class="w"> </span><span class="mi">347086</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"last_updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Updated 1 year ago"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"How to Write a Requirements Document"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/Write-a-Requirements-Document"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/2/20/Write-a-Requirements-Document-Step-10.jpg/-crop-250-145-193px-Write-a-Requirements-Document-Step-10.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"views"</span><span class="p">:</span><span class="w"> </span><span class="mi">202132</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"last_updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Updated 1 year ago"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a user&#39;s information.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://japi.rest/wikihow/v1/search?q=</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>true</td>
+<td>The search query</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
 <p>JAPI uses the following error codes:</p>
 
 <table><thead>
