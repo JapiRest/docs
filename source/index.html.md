@@ -20,6 +20,10 @@ code_clipboard: true
 
 # Introduction
 
+```shell
+echo "Hello, world!"
+```
+
 Welcome to the JAPI documentation website! Here you can find out how to use our API to the best of your needs!
 
 <aside class="warning">
