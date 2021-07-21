@@ -23,6 +23,9 @@ code_clipboard: true
 ```shell
 echo "Hello, world!"
 ```
+```javascript
+console.log("Hello, world!");
+```
 
 Welcome to the JAPI documentation website! Here you can find out how to use our API to the best of your needs!
 
