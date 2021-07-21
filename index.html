@@ -340,9 +340,9 @@
 <aside class="warning">
   JAPI is still in early development and is not suitable for production envirements!
 </aside>
-<h1 id='discord'>Discord</h1><h2 id='get-user'>Get User</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user?id=:userId"</span> <span class="se">\</span>
+<h1 id='discord'>Discord</h1><h2 id='get-user'>Get User</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {API KEY}"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user?id=:userId</span><span class="dl">"</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user/:userId</span><span class="dl">"</span><span class="p">)</span>
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">Bearer {API KEY}</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
@@ -366,7 +366,7 @@
 </span></code></pre></div>
 <p>This endpoint retrieves a user&#39;s information.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://japi.rest/discord/v1/user?id=:userId</code></p>
+<p><code>GET https://japi.rest/discord/v1/user/:userId</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
