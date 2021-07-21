@@ -3,16 +3,15 @@ title: JAPI.rest — The general API
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
   - javascript
 
 toc_footers:
   - <a href='https://key.japi.rest'>Register an API key</a>
 
 includes:
-  - errors
+  - discord
   - example
+  - errors
 
 search: true
 
