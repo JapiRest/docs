@@ -32,5 +32,5 @@ Welcome to the JAPI documentation website! Here you can find out how to use our 
 Some of our routes require a [JAPI Key](https://key.japi.rest) to be passed in the header of the request. They are used to identify the user and to restrict access to certain routes. You can register your own key [here](https://key.japi.rest).
 
 <aside class="warning">
-  JAPI is still in early development and is not suitable for production envirements!
+  JAPI is still in early development and is not suitable for production environments!
 </aside>
