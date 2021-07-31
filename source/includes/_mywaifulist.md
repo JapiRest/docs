@@ -25,6 +25,7 @@ console.log(data);
   "cached": false,
   "data": {
     "name": "Sylvie",
+    "alternateName": null,
     "gender": "female",
     "description": "Sylvie is an artist in the example Ren Py visual novel, The Question.",
     "image": "https://thicc.mywaifulist.moe/waifus/26329/ea3bf9950e1e70afc1fa0088ad3aad5cf9817b113c9e9c6081c4fc246b5aeeec_thumb.png",
@@ -69,6 +70,8 @@ console.log(data);
   "cached": false,
   "data": {
     "name": "Sylvie",
+    "alternateName": null,
+    "gender": "female",
     "description": "Sylvie is an artist in the example Ren Py visual novel, The Question.",
     "image": "https://thicc.mywaifulist.moe/waifus/26329/ea3bf9950e1e70afc1fa0088ad3aad5cf9817b113c9e9c6081c4fc246b5aeeec_thumb.png",
     "url": "https://mywaifulist.moe/waifu/sylvie-4"
