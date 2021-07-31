@@ -335,6 +335,20 @@
                   <li>
                     <a href="#search" class="toc-h2 toc-link" data-title="Search">Search</a>
                   </li>
+                  <li>
+                    <a href="#information" class="toc-h2 toc-link" data-title="Information">Information</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#wikihow" class="toc-h1 toc-link" data-title="WikiHow">WikiHow</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#search" class="toc-h2 toc-link" data-title="Search">Search</a>
+                  </li>
+                  <li>
+                    <a href="#random" class="toc-h2 toc-link" data-title="Random">Random</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -613,7 +627,7 @@
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves a user&#39;s information.</p>
+<p>This endpoint retrieves the search results from wikihow.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://japi.rest/wikihow/v1/search?q=</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
@@ -630,6 +644,206 @@
 <td>The search query</td>
 </tr>
 </tbody></table>
+<h2 id='information'>Information</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/wikihow/v1/info/Write-Software-Documentation"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
+<span class="kd">const</span> <span class="nx">pageName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Write-Software-Documentation</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://japi.rest/wikihow/v1/info/</span><span class="p">${</span><span class="nx">pageName</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"How to Write Software Documentation"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Good software documentation, whether a specifications document for programmers and testers, a technical document for internal users, or software manuals and help files for end users, helps the person working with the software understand its features and functions. Good software documentation is specific, concise, and relevant, providing all the information important to the person using the software.[1] X Research source Following are instructions on how to write software documentation for technical users and end users. "</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"byline"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Author Info"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"last_updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"January 19, 2021"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"references"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"ref_num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">"refrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://clickhelp.com/software-documentation-glossary/software-documentation/"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"ref_num"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nl">"refrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.gnu.org/software/emacs/manual/html_node/elisp/Documentation-Tips.html"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"ref_num"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nl">"refrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://formidableforms.com/4-steps-to-creating-great-end-user-documentation/"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"ref_num"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nl">"refrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.divio.com/blog/documentation/"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"ref_num"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nl">"refrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.divio.com/blog/documentation/"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"ref_num"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="nl">"refrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.techscribe.co.uk/ta/how-to-write-user-documentation.htm"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"ref_num"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="nl">"refrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://www.techscribe.co.uk/ta/how-to-write-instructions.htm"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"ref_num"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nl">"refrence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rodney Ruff, Omaha, NE; experience as technical writer/help file author since 1997"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"sections"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Method 1 of 2:"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Writing Software Documentation for Technical Users"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"steps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/5/57/Write-Software-Documentation-Step-1.jpg/aid1568971-v4-728px-Write-Software-Documentation-Step-1.jpg"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image titled Write Software Documentation Step 1"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Determine what information needs to be included. Software specification documents serve as reference manuals for designers of the user interface programmers who write the code, and testers who verify that the software works as intended. The exact information depends on the program in question but may include any of the following:</span><span class="se">\n\n</span><span class="s2">Key files within the application. This may include files created by the development team, databases accessed during the program's operation, and third-party utility programs.</span><span class="se">\n</span><span class="s2">Functions and subroutines. This includes an explanation of what each function or subroutine does, including its range of input values and output values.</span><span class="se">\n</span><span class="s2">Program variables and constants, and how they're used in the application.</span><span class="se">\n</span><span class="s2">The overall program structure. For a disc-based application, this may mean describing the program's individual modules and libraries, while for a Web application, this may mean describing which pages use which files."</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/6/6f/Write-Software-Documentation-Step-2.jpg/aid1568971-v4-728px-Write-Software-Documentation-Step-2.jpg"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image titled Write Software Documentation Step 2"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Decide how much of the documentation should be within the program code and how much should be separate from it. The more technical documentation is developed within the program's source code to begin with, the easier it will be to update and maintain along with the code, as well as to document various versions of the original application. At a minimum, documentation within the source code needs to explain the purpose of functions, subroutines, variables, and constants.[2]</span><span class="se">\n\t</span><span class="s2">X</span><span class="se">\n\t\t</span><span class="s2">Research source</span><span class="se">\n\t\t\n\t\t\t\t\n\n\n\n\n</span><span class="s2">If the source code is particularly lengthy, it can be documented in the form of a help file, which can be indexed or searched with keywords. This is a particular advantage for applications where the program logic is fragmented over many pages and includes a number of supplemental files, as with certain Web applications.</span><span class="se">\n</span><span class="s2">Some programming languages, such as Java and the .NET Framework (Visual Basic.NET, C #), have their own standards for documenting code. In these cases, follow the standards as to how much of the documentation should be included with the source code."</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/8/85/Write-Software-Documentation-Step-3.jpg/aid1568971-v4-728px-Write-Software-Documentation-Step-3.jpg"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image titled Write Software Documentation Step 3"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Choose the appropriate documentation tool. To some extent, this is determined by the language the code is written in, be it C++, C#, Visual Basic, Java, or PHP, as specific tools exist for these and other languages. In other cases, the tool to use is determined by the type of documentation required.</span><span class="se">\n\n</span><span class="s2">Word-processing programs for Microsoft Word are adequate for creating separate text files of documentation, as long as the documentation is fairly short and simple. For long, complex text files, many technical writers prefer a documentation tool such as Adobe FrameMaker.</span><span class="se">\n</span><span class="s2">Help files for documenting source code can be produced with any help authoring tool, such as RoboHelp, Help and Manual, Doc-To-Help, MadCap Flare, or HelpLogix."</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Method 2 of 2:"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"headline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Writing Software Documentation for End Users"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"steps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/8/85/Write-Software-Documentation-Step-4.jpg/aid1568971-v4-728px-Write-Software-Documentation-Step-4.jpg"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image titled Write Software Documentation Step 4"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Determine the business reasons for your documentation. Although the functional reason for documenting software is to help users understand how to use the application, there are other reasons as well, such as assisting in marketing the software, enhancing the company image, and most notably, reducing technical support costs.[3]</span><span class="se">\n\t</span><span class="s2">X</span><span class="se">\n\t\t</span><span class="s2">Research source</span><span class="se">\n\t\t\n\t\t\t\t\n\n\n</span><span class="s2"> In some cases, documentation is necessary to comply with certain regulations or other legal requirements.</span><span class="se">\n</span><span class="s2">In no case, however, should software documentation substitute for poor interface design. If an application screen requires reams of documentation to explain it, better to change the screen design to something more intuitive."</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/3/35/Write-Software-Documentation-Step-5.jpg/aid1568971-v4-728px-Write-Software-Documentation-Step-5.jpg"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image titled Write Software Documentation Step 5"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Understand the audience you're writing the documentation for. In most cases, software users have little knowledge of computers outside of the applications they use. There are several ways to determine how to address their needs with your documentation.</span><span class="se">\n\n</span><span class="s2">Look at the job titles your prospective users hold. A system administrator is likely expert with a number of software applications, while a data entry clerk is more likely to know only the application he or she currently uses to enter data.</span><span class="se">\n</span><span class="s2">Look at the users themselves. Although job titles generally indicate what people do, there can be considerable variation in how certain titles are used within a given organization. By interviewing prospective users, you can get a feel for whether your impressions of what their job title indicates are accurate or not.</span><span class="se">\n</span><span class="s2">Look at existing documentation. Documentation for previous versions of software, as well as functional specifications, provide some indication as to what the user will need to know to use the program. Keep in mind, however, that end users are not as interested in how the program works as they are in what it can do for them.</span><span class="se">\n</span><span class="s2">Identify the tasks needed to do the job, and what tasks need to be done before those tasks can be done."</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/5/5b/Write-Software-Documentation-Step-6.jpg/aid1568971-v4-728px-Write-Software-Documentation-Step-6.jpg"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image titled Write Software Documentation Step 6"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Determine the appropriate format(s) for the documentation. Software documentation can be structured in 1 of 2 formats, the reference manual and the user guide. Sometimes, a combination of formats is the best approach.</span><span class="se">\n\n</span><span class="s2">A reference manual format is devoted to explaining the individual features of a software application (button, tab, field, and dialog box) and how they work. Many help files are written in this format, particularly context-sensitive help that displays a relevant topic whenever a user clicks the Help button on a particular screen.[4]</span><span class="se">\n\t</span><span class="s2">X</span><span class="se">\n\t\t</span><span class="s2">Research source</span><span class="se">\n\t\t\n\t\t\t\t\n\n\n\n\n</span><span class="s2">A user guide format explains how to use the software to perform a particular task. User guides are often formatted as printed guides or PDFs, although some help files include topics on how to perform particular tasks. (These help topics are usually not context-sensitive, although they may be hyperlinked to from topics that are.) User guides often take the form of tutorials, with a summary of the tasks to be performed in the introduction and instructions given in numbered steps.[5]</span><span class="se">\n\t</span><span class="s2">X</span><span class="se">\n\t\t</span><span class="s2">Research source"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/d/d9/Write-Software-Documentation-Step-7.jpg/aid1568971-v4-728px-Write-Software-Documentation-Step-7.jpg"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image titled Write Software Documentation Step 7"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Decide what form(s) the documentation should take. Software documentation for end users can take 1 or several of many forms: printed manuals, PDF documents, help files, or online help. Each form is designed to show the user how to use each of the program's functions, whether in the form of a walkthrough or a tutorial; in the case of help files and online help, this may include demonstration videos as well as text and still graphics.</span><span class="se">\n</span><span class="s2">Help files and online help should be indexed and keyword-searchable to allow users to quickly find the information they're looking for. Although help file authoring tools can generate indexes automatically, it is often better to create the index manually, using terms users are likely to search for."</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"num"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.wikihow.com/images/thumb/f/fd/Write-Software-Documentation-Step-8.jpg/aid1568971-v4-728px-Write-Software-Documentation-Step-8.jpg"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"alt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Image titled Write Software Documentation Step 8"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Choose the appropriate documentation tool. Printed or PDF user manuals can be written with a word-processing program like Word or a sophisticated text editor like FrameMaker, depending on their length and complexity. Help files can be written with a help authoring tool like RoboHelp, Help and Manual, Doc-To-Help, Flare, HelpLogix, or HelpServer."</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a article&#39;s information.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://japi.rest/wikihow/v1/info/:title</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>true</td>
+<td>The page title</td>
+</tr>
+</tbody></table>
+<h1 id='wikihow'>WikiHow</h1><h2 id='search'>Search</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/mywaifulist/v1/waifu/sylvie-4"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
+<span class="kd">const</span> <span class="nx">waifuName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">sylvie-4</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://japi.rest/mywaifulist/v1/waifu/</span><span class="p">${</span><span class="nx">waifuName</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sylvie"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sylvie is an artist in the example Ren Py visual novel, The Question."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://thicc.mywaifulist.moe/waifus/26329/ea3bf9950e1e70afc1fa0088ad3aad5cf9817b113c9e9c6081c4fc246b5aeeec_thumb.png"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mywaifulist.moe/waifu/sylvie-4"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves information from mywaifulist using the waifu name.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://japi.rest/mywaifulist/v1/waifu/:name</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>true</td>
+<td>The waifu name</td>
+</tr>
+</tbody></table>
+<h2 id='random'>Random</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/mywaifulist/v1/random"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
+<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://japi.rest/mywaifulist/v1/random`</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sylvie"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sylvie is an artist in the example Ren Py visual novel, The Question."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://thicc.mywaifulist.moe/waifus/26329/ea3bf9950e1e70afc1fa0088ad3aad5cf9817b113c9e9c6081c4fc246b5aeeec_thumb.png"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mywaifulist.moe/waifu/sylvie-4"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://japi.rest/mywaifulist/v1/waifu/sylvie-4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a article&#39;s information.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://japi.rest/mywaifulist/v1/random</code></p>
 <h1 id='errors'>Errors</h1>
 <p>JAPI uses the following error codes:</p>
 
