@@ -344,10 +344,10 @@
             <a href="#mywaifulist" class="toc-h1 toc-link" data-title="MyWaifuList">MyWaifuList</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#search" class="toc-h2 toc-link" data-title="Search">Search</a>
+                    <a href="#waifu-information" class="toc-h2 toc-link" data-title="Waifu Information">Waifu Information</a>
                   </li>
                   <li>
-                    <a href="#random" class="toc-h2 toc-link" data-title="Random">Random</a>
+                    <a href="#random-waifu-information" class="toc-h2 toc-link" data-title="Random Waifu Information">Random Waifu Information</a>
                   </li>
               </ul>
           </li>
@@ -776,7 +776,7 @@
 <td>The page title</td>
 </tr>
 </tbody></table>
-<h1 id='mywaifulist'>MyWaifuList</h1><h2 id='search'>Search</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/mywaifulist/v1/waifu/sylvie-4"</span> <span class="se">\</span>
+<h1 id='mywaifulist'>MyWaifuList</h1><h2 id='waifu-information'>Waifu Information</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/mywaifulist/v1/waifu/sylvie-4"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
 <span class="kd">const</span> <span class="nx">waifuName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">sylvie-4</span><span class="dl">'</span><span class="p">;</span>
@@ -817,7 +817,7 @@
 <td>The waifu name</td>
 </tr>
 </tbody></table>
-<h2 id='random'>Random</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/mywaifulist/v1/random"</span> <span class="se">\</span>
+<h2 id='random-waifu-information'>Random Waifu Information</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/mywaifulist/v1/random"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
 <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://japi.rest/mywaifulist/v1/random`</span><span class="p">,</span> <span class="p">{</span>
