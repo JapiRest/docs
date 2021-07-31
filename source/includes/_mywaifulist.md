@@ -49,13 +49,13 @@ name      | true     | The waifu name
 ## Random Waifu Information
 
 ```shell
-curl "https://japi.rest/mywaifulist/v1/random" \
+curl "https://japi.rest/mywaifulist/v1/waifu/random" \
   -H "Authorization: {API KEY}"
 ```
 
 ```javascript
 const fetch = require('node-fetch'); // NodeJS users
-const data = fetch(`https://japi.rest/mywaifulist/v1/random`, {
+const data = fetch(`https://japi.rest/mywaifulist/v1/waifu/random`, {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())
 
@@ -84,7 +84,7 @@ This endpoint retrieves a article's information.
 
 ### HTTP Request
 
-`GET https://japi.rest/mywaifulist/v1/random`
+`GET https://japi.rest/mywaifulist/v1/waifu/random`
 
 ## Series Search
 
