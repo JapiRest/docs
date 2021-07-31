@@ -1,6 +1,6 @@
 # MyWaifuList
 
-## Search
+## Waifu Information
 
 ```shell
 curl "https://japi.rest/mywaifulist/v1/waifu/sylvie-4" \
@@ -44,7 +44,7 @@ Parameter | Required | Description
 --------- | -------- | -----------
 name      | true     | The waifu name
 
-## Random
+## Random Waifu Information
 
 ```shell
 curl "https://japi.rest/mywaifulist/v1/random" \
