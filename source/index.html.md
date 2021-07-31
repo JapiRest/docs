@@ -11,6 +11,7 @@ toc_footers:
 includes:
   - discord
   - wikihow
+  - mywaifulist
   - errors
 
 search: true
