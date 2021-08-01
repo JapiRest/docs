@@ -12,6 +12,7 @@ includes:
   - discord
   - wikihow
   - mywaifulist
+  - pcpartpicker
   - errors
 
 search: true
