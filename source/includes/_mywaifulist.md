@@ -24,12 +24,65 @@ console.log(data);
   "cache_expiry": 3600,
   "cached": false,
   "data": {
+    "id": 26329,
+    "slug": "sylvie-4",
     "name": "Sylvie",
-    "alternateName": null,
-    "gender": "female",
+    "original_name": "",
+    "romaji_name": "",
+    "display_picture": "https://thicc.mywaifulist.moe/waifus/26329/ea3bf9950e1e70afc1fa0088ad3aad5cf9817b113c9e9c6081c4fc246b5aeeec_thumb.png",
     "description": "Sylvie is an artist in the example Ren Py visual novel, The Question.",
-    "image": "https://thicc.mywaifulist.moe/waifus/26329/ea3bf9950e1e70afc1fa0088ad3aad5cf9817b113c9e9c6081c4fc246b5aeeec_thumb.png",
-    "url": "https://mywaifulist.moe/waifu/sylvie-4"
+    "weight": null,
+    "height": null,
+    "bust": null,
+    "hip": null,
+    "waist": null,
+    "blood_type": null,
+    "origin": null,
+    "age": 0,
+    "birthday_month": "",
+    "birthday_day": 0,
+    "birthday_year": "",
+    "likes": 1,
+    "trash": 1,
+    "popularity_rank": 29187,
+    "like_rank": 30514,
+    "trash_rank": 21800,
+    "husbando": false,
+    "nsfw": false,
+    "creator": {
+      "id": 52140,
+      "name": "WaifuAdder420"
+    },
+    "tags": [],
+    "url": "https://www.mywaifulist.moe/waifu/sylvie-4",
+    "appearances": [
+      {
+        "name": "Ren'Py",
+        "original_name": null,
+        "romaji_name": "",
+        "description": "A visual novel engine",
+        "slug": "ren-py",
+        "airing_start": null,
+        "airing_end": null,
+        "episode_count": null,
+        "release": null,
+        "display_picture": "https://thicc.mywaifulist.moe/series/4563/c60ae44bcb66c927051ccbf278ebe92bae73b71b4a454eb7d27f8f576736fd29.jpeg",
+        "studio": null
+      }
+    ],
+    "series": {
+      "name": "Ren'Py",
+      "original_name": null,
+      "romaji_name": "",
+      "description": "A visual novel engine",
+      "slug": "ren-py",
+      "airing_start": null,
+      "airing_end": null,
+      "episode_count": null,
+      "release": null,
+      "display_picture": "https://thicc.mywaifulist.moe/series/4563/c60ae44bcb66c927051ccbf278ebe92bae73b71b4a454eb7d27f8f576736fd29.jpeg",
+      "studio": null
+    }
   }
 }
 ```
@@ -69,14 +122,66 @@ console.log(data);
   "cache_expiry": 3600,
   "cached": false,
   "data": {
+    "id": 26329,
+    "slug": "sylvie-4",
     "name": "Sylvie",
-    "alternateName": null,
-    "gender": "female",
+    "original_name": "",
+    "romaji_name": "",
+    "display_picture": "https://thicc.mywaifulist.moe/waifus/26329/ea3bf9950e1e70afc1fa0088ad3aad5cf9817b113c9e9c6081c4fc246b5aeeec_thumb.png",
     "description": "Sylvie is an artist in the example Ren Py visual novel, The Question.",
-    "image": "https://thicc.mywaifulist.moe/waifus/26329/ea3bf9950e1e70afc1fa0088ad3aad5cf9817b113c9e9c6081c4fc246b5aeeec_thumb.png",
-    "url": "https://mywaifulist.moe/waifu/sylvie-4"
-  },
-  "url": "https://japi.rest/mywaifulist/v1/waifu/sylvie-4"
+    "weight": null,
+    "height": null,
+    "bust": null,
+    "hip": null,
+    "waist": null,
+    "blood_type": null,
+    "origin": null,
+    "age": 0,
+    "birthday_month": "",
+    "birthday_day": 0,
+    "birthday_year": "",
+    "likes": 1,
+    "trash": 1,
+    "popularity_rank": 29187,
+    "like_rank": 30514,
+    "trash_rank": 21800,
+    "husbando": false,
+    "nsfw": false,
+    "creator": {
+      "id": 52140,
+      "name": "WaifuAdder420"
+    },
+    "tags": [],
+    "url": "https://www.mywaifulist.moe/waifu/sylvie-4",
+    "appearances": [
+      {
+        "name": "Ren'Py",
+        "original_name": null,
+        "romaji_name": "",
+        "description": "A visual novel engine",
+        "slug": "ren-py",
+        "airing_start": null,
+        "airing_end": null,
+        "episode_count": null,
+        "release": null,
+        "display_picture": "https://thicc.mywaifulist.moe/series/4563/c60ae44bcb66c927051ccbf278ebe92bae73b71b4a454eb7d27f8f576736fd29.jpeg",
+        "studio": null
+      }
+    ],
+    "series": {
+      "name": "Ren'Py",
+      "original_name": null,
+      "romaji_name": "",
+      "description": "A visual novel engine",
+      "slug": "ren-py",
+      "airing_start": null,
+      "airing_end": null,
+      "episode_count": null,
+      "release": null,
+      "display_picture": "https://thicc.mywaifulist.moe/series/4563/c60ae44bcb66c927051ccbf278ebe92bae73b71b4a454eb7d27f8f576736fd29.jpeg",
+      "studio": null
+    }
+  }
 }
 ```
 
