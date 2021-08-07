@@ -13,6 +13,7 @@ includes:
   - wikihow
   - mywaifulist
   - pcpartpicker
+  - japipresence
   - errors
 
 search: true
