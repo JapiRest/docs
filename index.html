@@ -387,6 +387,14 @@
               </ul>
           </li>
           <li>
+            <a href="#japi-presence" class="toc-h1 toc-link" data-title="JAPI Presence">JAPI Presence</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-presence" class="toc-h2 toc-link" data-title="Get Presence">Get Presence</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -2117,6 +2125,58 @@
 <td>listid</td>
 <td>true</td>
 <td>The list id</td>
+</tr>
+</tbody></table>
+<h1 id='japi-presence'>JAPI Presence</h1><h2 id='get-presence'>Get Presence</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/presence/v1/get?id=209796601357533184"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// NodeJS users</span>
+<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/presence/v1/get?id=209796601357533184</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"sessionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vscode"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"workspaceFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"void"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/void/beta/JAPI-Docs/source/includes/_japipresence.md"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"_japipresence.md"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"size"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"ctime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1628299422775</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mtime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1628300472949</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">1080</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"totalLines"</span><span class="p">:</span><span class="w"> </span><span class="s2">"47"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"currentLine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"currentColumn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"git"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/JapiRest/docs.japi.rest/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"branch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a user&#39;s presence who is using the <a href="https://marketplace.visualstudio.com/items?itemName=japirest.japi-presence">JAPI Presence</a> Visual Studio Code Extension.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://japi.rest/presence/v1/get?id=:identifier</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>identifier</td>
+<td>true</td>
+<td>The user&#39;s JAPI identifier.</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
