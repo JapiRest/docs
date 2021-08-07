@@ -7,7 +7,6 @@ curl "https://japi.rest/presence/v1/get?id=209796601357533184"
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch("https://japi.rest/presence/v1/get?id=209796601357533184").then(res => res.json())
 
 console.log(data);

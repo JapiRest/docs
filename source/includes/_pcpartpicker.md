@@ -8,7 +8,6 @@ curl "https://japi.rest/pcpartpicker/v1/list/fGWxfH" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const partId = 'fGWxfH';
 const data = fetch(`https://japi.rest/pcpartpicker/v1/list/${partId}`, {
   headers: { "Authorization": "{API KEY}" }

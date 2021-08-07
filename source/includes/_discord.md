@@ -7,7 +7,6 @@ curl "https://japi.rest/discord/v1/user/:userId"
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch("https://japi.rest/discord/v1/user/:userId").then(res => res.json())
 
 console.log(data);
@@ -53,7 +52,6 @@ curl "https://japi.rest/discord/v1/user/:userId/avatar"
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch("https://japi.rest/discord/v1/user/:userId/avatar").then(res => res.url)
 
 console.log(data);
@@ -87,7 +85,6 @@ curl "https://japi.rest/discord/v1/user/:userId/banner"
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch("https://japi.rest/discord/v1/user/:userId/banner").then(res => res.url)
 
 console.log(data);
@@ -123,7 +120,6 @@ curl "https://japi.rest/discord/v1/template/:code" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch("https://japi.rest/discord/v1/template/:code", {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())

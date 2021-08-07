@@ -8,7 +8,6 @@ curl "https://japi.rest/mywaifulist/v1/waifu/sylvie-4" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const waifuName = 'sylvie-4';
 const data = fetch(`https://japi.rest/mywaifulist/v1/waifu/${waifuName}`, {
   headers: { "Authorization": "{API KEY}" }
@@ -107,7 +106,6 @@ curl "https://japi.rest/mywaifulist/v1/waifu/random" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch(`https://japi.rest/mywaifulist/v1/waifu/random`, {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())
@@ -199,7 +197,6 @@ curl "https://japi.rest/mywaifulist/v1/series?q=village" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const seriesSearch = 'village';
 const data = fetch(`https://japi.rest/mywaifulist/v1/series?q=${seriesSearch}`, {
   headers: { "Authorization": "{API KEY}" }
@@ -316,7 +313,6 @@ curl "https://japi.rest/mywaifulist/v1/series/the-lost-village" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const seriesName = 'the-lost-village';
 const data = fetch(`https://japi.rest/mywaifulist/v1/series/${seriesName}`, {
   headers: { "Authorization": "{API KEY}" }
@@ -470,7 +466,6 @@ curl "https://japi.rest/mywaifulist/v1/best" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch(`https://japi.rest/mywaifulist/v1/best`, {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())
@@ -588,7 +583,6 @@ curl "https://japi.rest/mywaifulist/v1/popular" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch(`https://japi.rest/mywaifulist/v1/popular`, {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())
@@ -671,7 +665,6 @@ curl "https://japi.rest/mywaifulist/v1/trash" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch(`https://japi.rest/mywaifulist/v1/trash`, {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())
@@ -744,7 +737,6 @@ curl "https://japi.rest/mywaifulist/v1/vtubers" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch(`https://japi.rest/mywaifulist/v1/vtubers`, {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())
@@ -822,7 +814,6 @@ curl "https://japi.rest/mywaifulist/v1/current/best" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch(`https://japi.rest/mywaifulist/v1/current/best`, {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())
@@ -935,7 +926,6 @@ curl "https://japi.rest/mywaifulist/v1/current/trash" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch(`https://japi.rest/mywaifulist/v1/current/trash`, {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())
@@ -1048,7 +1038,6 @@ curl "https://japi.rest/mywaifulist/v1/current/popular" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const data = fetch(`https://japi.rest/mywaifulist/v1/current/popular`, {
   headers: { "Authorization": "{API KEY}" }
 }).then(res => res.json())

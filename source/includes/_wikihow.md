@@ -8,7 +8,6 @@ curl "https://japi.rest/wikihow/v1/search?q=How+to+eat+food" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const search = 'How to eat food';
 const data = fetch(`https://japi.rest/wikihow/v1/search/?q=${search}`, {
   headers: { "Authorization": "{API KEY}" }
@@ -75,7 +74,6 @@ curl "https://japi.rest/wikihow/v1/info/Write-Software-Documentation" \
 ```
 
 ```javascript
-const fetch = require('node-fetch'); // NodeJS users
 const pageName = 'Write-Software-Documentation';
 const data = fetch(`https://japi.rest/wikihow/v1/info/${pageName}`, {
   headers: { "Authorization": "{API KEY}" }
