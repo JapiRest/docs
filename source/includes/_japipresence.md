@@ -19,23 +19,22 @@ console.log(data);
   "cache_expiry": 300,
   "cached": true,
   "data": {
+    "presenceVersion": "0.3.0",
     "sessionType": "vscode",
     "workspaceFolder": "void",
+    "dirName": "includes",
     "file": {
       "path": "/void/beta/JAPI-Docs/source/includes/_japipresence.md",
       "name": "_japipresence.md",
-      "size": {
-        "ctime": 1628299422775,
-        "mtime": 1628300472949,
-        "size": 1080,
-        "type": 1
-      },
-      "totalLines": "47",
-      "currentLine": "1",
-      "currentColumn": "1"
+      "extension": ".md",
+      "extensionImage": "https://github.com/vscode-icons/vscode-icons/blob/master/icons/file_type_md.svg",
+      "size": "1.33kb",
+      "totalLines": "54",
+      "currentLine": "20",
+      "currentColumn": "17"
     },
     "git": {
-      "link": "https://github.com/JapiRest/docs.japi.rest/",
+      "repoName": "",
       "branch": "main"
     }
   }
