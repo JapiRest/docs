@@ -14,6 +14,7 @@ includes:
   - mywaifulist
   - pcpartpicker
   - japipresence
+  - instagram
   - errors
 
 search: true
