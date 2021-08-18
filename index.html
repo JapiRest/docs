@@ -395,6 +395,14 @@
               </ul>
           </li>
           <li>
+            <a href="#instagram" class="toc-h1 toc-link" data-title="Instagram">Instagram</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-instagram-user" class="toc-h2 toc-link" data-title="Get Instagram User">Get Instagram User</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -2157,6 +2165,328 @@
 <td>identifier</td>
 <td>true</td>
 <td>The user&#39;s JAPI identifier.</td>
+</tr>
+</tbody></table>
+<h1 id='instagram'>Instagram</h1><h2 id='get-instagram-user'>Get Instagram User</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/instagram/v1/user/memes_1969"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/instagram/v1/user/memes_1969</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"seo_category_infos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Beauty"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"beauty"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Dance &amp; Performance"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"dance_and_performance"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Fitness"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"fitness"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Food &amp; Drink"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"food_and_drink"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Home &amp; Garden"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"home_and_garden"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Music"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"music"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Visual Arts"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"visual_arts"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"logging_page_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"profilePage_10430362358"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"show_suggested_profiles"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"show_follow_dialog"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"graphql"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"biography"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Memes = Life"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"blocked_by_viewer"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"restricted_by_viewer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"country_block"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"external_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"external_url_linkshimmed"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"edge_followed_by"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">43</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"fbid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17841410390753795"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"followed_by_viewer"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"edge_follow"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"follows_viewer"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Just Another Meme Account"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"has_ar_effects"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"has_clips"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"has_guides"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"has_channel"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"has_blocked_viewer"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"highlight_reel_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"has_requested_viewer"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"hide_like_and_view_counts"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10430362358"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"is_business_account"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"is_professional_account"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"is_joined_recently"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"business_address_json"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"business_contact_method"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"business_email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"business_phone_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"business_category_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"General Interest"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"overall_category_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"category_enum"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEDIA"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"category_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Media"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"is_private"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"is_verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"edge_mutual_followed_by"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"profile_pic_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/s150x150/70808195_647148179145924_7544162737492852736_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&amp;_nc_ohc=ymVNGaqDfMkAX_TAh0T&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=a222b89e84b93b78d6ec9f430c90c8c0&amp;oe=61237A7D&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"profile_pic_url_hd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/s320x320/70808195_647148179145924_7544162737492852736_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&amp;_nc_ohc=ymVNGaqDfMkAX_TAh0T&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=9b87be93e98581bb3af0b5fc93116ce2&amp;oe=6123CFCD&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"requested_by_viewer"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"should_show_category"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"should_show_public_contacts"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"memes_1969"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"connected_fb_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"edge_felix_video_timeline"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"page_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"has_next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"end_cursor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"edge_owner_to_timeline_media"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"page_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"has_next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"end_cursor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QVFCcl8zSjBMMTZnSFd5Y01aazhlZVFMemJJTlhic1VDd3RuVFlEeXVzV3BmYTJtNTY2MDFYU08xdkJjZEkwMkU3U3E0YTdkd1ZIVXVBNS03X3E4M0RFRA=="</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"node"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="nl">"__typename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GraphImage"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2580406755878857222"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"shortcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CPPckXcLWoG"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">1106</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">1080</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"display_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-15/e35/191148181_502902577573418_6450667914545997451_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&amp;_nc_cat=102&amp;_nc_ohc=C3CBgmCzq1cAX9rTMuc&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=39fc1e10aaeb6a456534cb2b26fb4655&amp;oe=61240320&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"edge_media_to_tagged_user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"fact_check_overall_rating"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"fact_check_information"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"gating_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"sharing_friction_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"should_have_sharing_friction"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"bloks_app_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"media_overlay_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"media_preview"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACkq0LaygeJWZASRyef8aJLO2xhQisD3J/xqzZ/6lP8AdFSSKoBYgE/T/Dn8aVjWUnzPV7vr5matnFn5hFjr1PT257+9KtnESMiP3xu9D7/j+mathgeqr044Pbj+7Uke1uy59gfx6gUWFd9395nizixyIzx2znoenP8APmucxXatGoBIABwew9K5HbUS8jroLm5tX03+Z1Nl/qI/90VNIpYYGMd85/Qiq9kf9Hj/AN0VNIRt5G4en+fTrWhxPd+rIQMDPOfo/wDU/rUsakcjGO+d39TVdVxxjjr93vj13VPFgdsH1xgfzNAdCZ/un6H+Vcn5z+prqJWIXgZ6556DHWuO3VnI7cPZc1/L9TqbI/uI/wDdFNmjAO485/2V4/EmuYW4lUAB2AHQBjj+dOFzKTgux/4Ef8as5GtfmdIuB0AHvhPyOD3pUTPGP0X/ABrnPOkH8TfmaQ3Eo6Ow/wCBH/GgaVkdaTtQj/ZP8q4vNbGmzO/mBmZsL3JPr61i1Mjalpf5H//Z"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10430362358"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"memes_1969"</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"is_video"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"has_upcoming_event"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"accessibility_caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Photo by Just Another Meme Account on May 23, 2021. May be an image of text that says 'Signs and who they should date Aries: Libra Taurus: Pisces Gemini: Libra Cancer: Aquariuis Leo: Libra Virgo: Nobody Libra: Leo Scorpio: Aries Sagittarius: Capricorn Capricorn: Sagittarius Aquarius: Cancer Pisces: Taurus + 96.6K'."</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"edge_media_to_caption"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"node"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tiktok is very interesting. Everyday something new pops up."</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                      </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"edge_media_to_comment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"comments_disabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"taken_at_timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1621828477</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"edge_liked_by"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"edge_media_preview_like"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"thumbnail_src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c0.10.847.847a/s640x640/191148181_502902577573418_6450667914545997451_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&amp;_nc_cat=102&amp;_nc_ohc=C3CBgmCzq1cAX9rTMuc&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=0fef7edc76b41ce61422931b60721fb9&amp;oe=612402F0&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"thumbnail_resources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-15/e35/c0.10.847.847a/s150x150/191148181_502902577573418_6450667914545997451_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&amp;_nc_cat=102&amp;_nc_ohc=C3CBgmCzq1cAX9rTMuc&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=34a91e1a1eea283daf30c9a7d1f47270&amp;oe=6122EC5C&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-15/e35/c0.10.847.847a/s240x240/191148181_502902577573418_6450667914545997451_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&amp;_nc_cat=102&amp;_nc_ohc=C3CBgmCzq1cAX9rTMuc&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=c1f09a18d6f643d08f4cd78d31f9cc42&amp;oe=6124549E&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-15/e35/c0.10.847.847a/s320x320/191148181_502902577573418_6450667914545997451_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&amp;_nc_cat=102&amp;_nc_ohc=C3CBgmCzq1cAX9rTMuc&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=f37ca638bce22ded3f36555a40b8cea6&amp;oe=61243224&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-15/e35/c0.10.847.847a/s480x480/191148181_502902577573418_6450667914545997451_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&amp;_nc_cat=102&amp;_nc_ohc=C3CBgmCzq1cAX9rTMuc&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=6a957ae80704da08817d1ea08b0ef8c3&amp;oe=61241025&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c0.10.847.847a/s640x640/191148181_502902577573418_6450667914545997451_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&amp;_nc_cat=102&amp;_nc_ohc=C3CBgmCzq1cAX9rTMuc&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=0fef7edc76b41ce61422931b60721fb9&amp;oe=612402F0&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">640</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">640</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                  </span><span class="p">],</span><span class="w">
+                  </span><span class="nl">"coauthor_producers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"node"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="nl">"__typename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GraphImage"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2433128417754107119"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"shortcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHENWeZJEzv"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"dimensions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">631</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">1080</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"display_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/123168166_398543181510066_1495412063261577122_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&amp;_nc_cat=106&amp;_nc_ohc=yvNvxuPnJ4EAX-w6otn&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=55f0775cfc526afd1a71afab175edbab&amp;oe=61228A3E&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"edge_media_to_tagged_user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"fact_check_overall_rating"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"fact_check_information"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"gating_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"sharing_friction_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"should_have_sharing_friction"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"bloks_app_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"media_overlay_info"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"media_preview"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACoY2jvPIVufcf8AxdAEmfut+Y/+LqG61JICUUFnHXsBxnk/T0rGkvpiwd3K46AdPy7/AI0Abjlt6jY38X8QPb/e/wAKjNwN5jz847bhn1/v+nvUVtPJdKC3yOC6ggcj5Rzg9+fpUA0lJIzIzsWIzk8/XOetL0H6misoJ24JbrgOucfTfU/mOP4G/Nf/AIqsWzs49ySxyZIPK8HsevcccV0NCBmZd6as26RSfMbGMnjgdOnQ1Ja6fHbgMRuk7secH29PyzRRTETygl0xx97n04rGngu40IbMoz0Tpj/d6n9aKKTVyk2ndE2nW7O/nsCiqMIp47YJx6enqefrt0UULQTdz//Z"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10430362358"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"memes_1969"</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"is_video"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"has_upcoming_event"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"accessibility_caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Photo by Just Another Meme Account on November 01, 2020. May be a meme of text that says 'How the bed feels when I'm trying to sleep How the bed feels when I need to get up'."</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"edge_media_to_caption"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                      </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"node"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                          </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hard to fall asleep, even harder to get outta bed"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                      </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"edge_media_to_comment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"comments_disabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"taken_at_timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1604271531</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"edge_liked_by"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"edge_media_preview_like"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+                  </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"thumbnail_src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/c172.0.484.484a/123168166_398543181510066_1495412063261577122_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&amp;_nc_cat=106&amp;_nc_ohc=yvNvxuPnJ4EAX-w6otn&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=846d99dfd9bf18c0e9b1d12cc17282d2&amp;oe=6122D8E8&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                  </span><span class="nl">"thumbnail_resources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/c172.0.484.484a/s150x150/123168166_398543181510066_1495412063261577122_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&amp;_nc_cat=106&amp;_nc_ohc=yvNvxuPnJ4EAX-w6otn&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=e58a91d2ee3277e1735ae22005bc574e&amp;oe=61241D0D&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">150</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/c172.0.484.484a/s240x240/123168166_398543181510066_1495412063261577122_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&amp;_nc_cat=106&amp;_nc_ohc=yvNvxuPnJ4EAX-w6otn&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=51e74eb18b623ad487d5868784009493&amp;oe=6123DD8B&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/c172.0.484.484a/s320x320/123168166_398543181510066_1495412063261577122_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&amp;_nc_cat=106&amp;_nc_ohc=yvNvxuPnJ4EAX-w6otn&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=3a45b968e91f4ad4040d2c8ae89427db&amp;oe=6122B575&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/c172.0.484.484a/s480x480/123168166_398543181510066_1495412063261577122_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&amp;_nc_cat=106&amp;_nc_ohc=yvNvxuPnJ4EAX-w6otn&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=0051fe3c96eb5a0f126aa9eec63fb7c5&amp;oe=6123ED74&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                      </span><span class="nl">"src"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/c172.0.484.484a/123168166_398543181510066_1495412063261577122_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&amp;_nc_cat=106&amp;_nc_ohc=yvNvxuPnJ4EAX-w6otn&amp;edm=ABfd0MgBAAAA&amp;ccb=7-4&amp;oh=846d99dfd9bf18c0e9b1d12cc17282d2&amp;oe=6122D8E8&amp;_nc_sid=7bff83"</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_width"</span><span class="p">:</span><span class="w"> </span><span class="mi">640</span><span class="p">,</span><span class="w">
+                      </span><span class="nl">"config_height"</span><span class="p">:</span><span class="w"> </span><span class="mi">640</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                  </span><span class="p">],</span><span class="w">
+                  </span><span class="nl">"coauthor_producers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"edge_saved_media"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"page_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"has_next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"end_cursor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"edge_media_collections"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"page_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"has_next_page"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"end_cursor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"edge_related_profiles"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"edges"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"toast_content_on_load"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"show_view_shop"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"profile_pic_edit_sync_props"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"always_show_message_button_to_pro_account"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves data from instagram for a given user.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://japi.rest/instagram/v1/user/:username</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>true</td>
+<td>The user&#39;s username.</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
