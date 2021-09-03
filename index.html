@@ -412,9 +412,9 @@
 
 <p>Some of our routes require a <a href="https://key.japi.rest">JAPI Key</a> to be passed in the header of the request. They are used to identify the user and to restrict access to certain routes. You can register your own key <a href="https://key.japi.rest">here</a>.</p>
 
-<aside class="warning">
+<!-- <aside class="warning">
   JAPI is still in early development and is not suitable for production environments!
-</aside>
+</aside> -->
 <h1 id='discord'>Discord</h1><h2 id='get-user'>Get User</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user/:userId</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
 
@@ -1236,7 +1236,7 @@
 </span></code></pre></div>
 <p>This endpoint retrieves information from mywaifulist using the waifu name.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET https://japi.rest/mywaifulist/v1/waifu/:series</code></p>
+<p><code>GET https://japi.rest/mywaifulist/v1/series/:series</code></p>
 <h3 id='path-parameters-2'>Path Parameters</h3>
 <table><thead>
 <tr>
