@@ -450,7 +450,7 @@ This endpoint retrieves information from mywaifulist using the waifu name.
 
 ### HTTP Request
 
-`GET https://japi.rest/mywaifulist/v1/waifu/:series`
+`GET https://japi.rest/mywaifulist/v1/series/:series`
 
 ### Path Parameters
 
