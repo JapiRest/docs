@@ -395,6 +395,14 @@
               </ul>
           </li>
           <li>
+            <a href="#tiktok" class="toc-h1 toc-link" data-title="TikTok">TikTok</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#tiktok-creator" class="toc-h2 toc-link" data-title="Tiktok Creator">Tiktok Creator</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -2157,6 +2165,229 @@
 <td>identifier</td>
 <td>true</td>
 <td>The user&#39;s JAPI identifier.</td>
+</tr>
+</tbody></table>
+<h1 id='tiktok'>TikTok</h1><h2 id='tiktok-creator'>Tiktok Creator</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/tiktok/v1/creator/@dumcrap"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">creator</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">dumcrap</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://japi.rest/tiktok/v1/creator/@</span><span class="p">${</span><span class="nx">creator</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:{</span><span class="w">
+     </span><span class="nl">"meta"</span><span class="p">:{</span><span class="w">
+        </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Poof 😘 (@dumcrap) TikTok | Watch Poof 😘's Newest TikTok Videos"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"keywords"</span><span class="p">:</span><span class="s2">"Poof 😘,dumcrap,TikTok, ティックトック, tik tok, tick tock, tic tok, tic toc, tictok, тик ток, ticktock"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"Poof 😘 (@dumcrap) on TikTok | 3.3K Likes. 89 Fans. Want a cookie? 🍪 Watch the latest video from Poof 😘 (@dumcrap)."</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"canonicalHref"</span><span class="p">:</span><span class="s2">"https://www.tiktok.com/@dumcrap"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"robotsContent"</span><span class="p">:</span><span class="s2">"index, follow"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"applicableDevice"</span><span class="p">:</span><span class="s2">"pc, mobile"</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="nl">"user"</span><span class="p">:{</span><span class="w">
+        </span><span class="nl">"user"</span><span class="p">:{</span><span class="w">
+           </span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"6790129596711224326"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"shortId"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"uniqueId"</span><span class="p">:</span><span class="s2">"dumcrap"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"nickname"</span><span class="p">:</span><span class="s2">"Poof 😘"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"avatarLarger"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1665263781858309~c5_1080x1080.jpeg?x-expires=1630965600&amp;x-signature=0ZA%2Br%2BcT1nY6IqBS4Okrp%2FmVnE0%3D"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"avatarMedium"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1665263781858309~c5_720x720.jpeg?x-expires=1630965600&amp;x-signature=NI6M8vHoWxlv2W%2Fidlz7AMxftnI%3D"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"avatarThumb"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1665263781858309~c5_100x100.jpeg?x-expires=1630965600&amp;x-signature=ojckG%2BH0U%2Fe7OIwY4bO9uDRd%2FPw%3D"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"signature"</span><span class="p">:</span><span class="s2">"Want a cookie? 🍪"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"createTime"</span><span class="p">:</span><span class="mi">1580950461</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"verified"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"secUid"</span><span class="p">:</span><span class="s2">"MS4wLjABAAAA-jRfqGFJPc-4NmoS6H_X4g_XKCT80Ebo5FG5A4MlU-USR8dPy0Jgb11uubT8hulH"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"ftc"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"relation"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"openFavorite"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"commentSetting"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"duetSetting"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"stitchSetting"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"privateAccount"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"secret"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"isADVirtual"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"roomId"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"stats"</span><span class="p">:{</span><span class="w">
+           </span><span class="nl">"followerCount"</span><span class="p">:</span><span class="mi">89</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"followingCount"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"heart"</span><span class="p">:</span><span class="mi">3276</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"heartCount"</span><span class="p">:</span><span class="mi">3276</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"videoCount"</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"diggCount"</span><span class="p">:</span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"itemList"</span><span class="p">:[</span><span class="w">
+
+        </span><span class="p">]</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="nl">"videos"</span><span class="p">:[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+           </span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"6956711554943323397"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"desc"</span><span class="p">:</span><span class="s2">"Yikes #fyp #ludwig #livestreamclips #clips #clip #inappropriate #funny #meme #dankmeme"</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"createTime"</span><span class="p">:</span><span class="mi">1619735633</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"scheduleTime"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"video"</span><span class="p">:{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"6956711554943323397"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"height"</span><span class="p">:</span><span class="mi">1024</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"width"</span><span class="p">:</span><span class="mi">576</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"duration"</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"ratio"</span><span class="p">:</span><span class="s2">"720p"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"cover"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/c2f3943d51d9492e9b24343183164b28?x-expires=1630900800&amp;x-signature=K71VOjegT3xSPudgu9U2qY4u1Jk%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"originCover"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/cfb6c7c93c21433c8877d84b52caf70b_1619735635?x-expires=1630900800&amp;x-signature=FzFWSKiYbt5ZHTLxCZ6pFlQ9FAk%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"dynamicCover"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/046d0771e7734c18b61eac7273435fb4_1619735635?x-expires=1630900800&amp;x-signature=aVEoUxYt9LSmr0VWlYim5GbhA7M%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"playAddr"</span><span class="p">:</span><span class="s2">"https://v16-web.tiktok.com/video/tos/useast2a/tos-useast2a-ve-0068c001/73b4a9873f7b42209e9c640690788302/?a=1988&amp;br=838&amp;bt=419&amp;cd=0%7C0%7C0&amp;ch=0&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;expire=1630903398&amp;ft=9wMeReta4kag3&amp;l=2021090522422801018803222332AF84BE&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;net=0&amp;pl=0&amp;policy=3&amp;qs=0&amp;rc=ank0bTVsZjptNTMzNzczM0ApNTplNDUzMzwzN2U7OGdkNWdpcWtnYV41NTJgLS1kMTZzczYvMV9jLTIyYy1gLV8uYl86Yw%3D%3D&amp;signature=9b1bcde07e6018ecb1c89c293b66e4d3&amp;tk=0&amp;vl=&amp;vr="</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"downloadAddr"</span><span class="p">:</span><span class="s2">"https://v16-web.tiktok.com/video/tos/useast2a/tos-useast2a-ve-0068c001/73b4a9873f7b42209e9c640690788302/?a=1988&amp;br=838&amp;bt=419&amp;cd=0%7C0%7C0&amp;ch=0&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;expire=1630903398&amp;ft=9wMeReta4kag3&amp;l=2021090522422801018803222332AF84BE&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;net=0&amp;pl=0&amp;policy=3&amp;qs=0&amp;rc=ank0bTVsZjptNTMzNzczM0ApNTplNDUzMzwzN2U7OGdkNWdpcWtnYV41NTJgLS1kMTZzczYvMV9jLTIyYy1gLV8uYl86Yw%3D%3D&amp;signature=9b1bcde07e6018ecb1c89c293b66e4d3&amp;tk=0&amp;vl=&amp;vr="</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"shareCover"</span><span class="p">:[</span><span class="w">
+                 </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/cfb6c7c93c21433c8877d84b52caf70b_1619735635~tplv-tiktok-play.jpeg?x-expires=1630900800&amp;x-signature=RPi8UejfcWcGSsBEmSerj%2BVi6nI%3D"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/cfb6c7c93c21433c8877d84b52caf70b_1619735635~tplv-tiktokx-share-play.jpeg?x-expires=1630900800&amp;x-signature=HTxAkwhwBSHllimV2CqgoJURQKc%3D"</span><span class="w">
+              </span><span class="p">],</span><span class="w">
+              </span><span class="nl">"reflowCover"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/obj/tos-maliva-p-0068/c2f3943d51d9492e9b24343183164b28?x-expires=1630900800&amp;x-signature=K71VOjegT3xSPudgu9U2qY4u1Jk%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"bitrate"</span><span class="p">:</span><span class="mi">429869</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"encodedType"</span><span class="p">:</span><span class="s2">"normal"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"format"</span><span class="p">:</span><span class="s2">"mp4"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"videoQuality"</span><span class="p">:</span><span class="s2">"normal"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"encodeUserTag"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"codecType"</span><span class="p">:</span><span class="s2">"h264"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"definition"</span><span class="p">:</span><span class="s2">"720p"</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+           </span><span class="nl">"author"</span><span class="p">:{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"6790129596711224326"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"shortId"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"uniqueId"</span><span class="p">:</span><span class="s2">"dumcrap"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"nickname"</span><span class="p">:</span><span class="s2">"Poof 😘"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"avatarLarger"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1665263781858309~c5_1080x1080.jpeg?x-expires=1630965600&amp;x-signature=0ZA%2Br%2BcT1nY6IqBS4Okrp%2FmVnE0%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"avatarMedium"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1665263781858309~c5_720x720.jpeg?x-expires=1630965600&amp;x-signature=NI6M8vHoWxlv2W%2Fidlz7AMxftnI%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"avatarThumb"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1665263781858309~c5_100x100.jpeg?x-expires=1630965600&amp;x-signature=ojckG%2BH0U%2Fe7OIwY4bO9uDRd%2FPw%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"signature"</span><span class="p">:</span><span class="s2">"Want a cookie? 🍪"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"createTime"</span><span class="p">:</span><span class="mi">1580950461</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"verified"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"secUid"</span><span class="p">:</span><span class="s2">"MS4wLjABAAAA-jRfqGFJPc-4NmoS6H_X4g_XKCT80Ebo5FG5A4MlU-USR8dPy0Jgb11uubT8hulH"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"ftc"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"relation"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"openFavorite"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"commentSetting"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"duetSetting"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"stitchSetting"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"privateAccount"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"secret"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"isADVirtual"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"roomId"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+           </span><span class="nl">"music"</span><span class="p">:{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"6956711419358317318"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"original sound"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"playUrl"</span><span class="p">:</span><span class="s2">"https://sf16-ies-music-va.tiktokcdn.com/obj/musically-maliva-obj/6956711521288325893.mp3"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"coverLarge"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1665263781858309~c5_1080x1080.jpeg?x-expires=1630965600&amp;x-signature=0ZA%2Br%2BcT1nY6IqBS4Okrp%2FmVnE0%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"coverMedium"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1665263781858309~c5_720x720.jpeg?x-expires=1630965600&amp;x-signature=NI6M8vHoWxlv2W%2Fidlz7AMxftnI%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"coverThumb"</span><span class="p">:</span><span class="s2">"https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1665263781858309~c5_100x100.jpeg?x-expires=1630965600&amp;x-signature=ojckG%2BH0U%2Fe7OIwY4bO9uDRd%2FPw%3D"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"authorName"</span><span class="p">:</span><span class="s2">"Poof 😘"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"original"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"duration"</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"album"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"scheduleSearchTime"</span><span class="p">:</span><span class="mi">0</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+           </span><span class="nl">"challenges"</span><span class="p">:[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                 </span><span class="nl">"id"</span><span class="p">:</span><span class="s2">"229207"</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"fyp"</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"desc"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"profileLarger"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"profileMedium"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"profileThumb"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"coverLarger"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"coverMedium"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"coverThumb"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"isCommerce"</span><span class="p">:</span><span class="kc">false</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+           </span><span class="p">],</span><span class="w">
+           </span><span class="nl">"stats"</span><span class="p">:{</span><span class="w">
+              </span><span class="nl">"diggCount"</span><span class="p">:</span><span class="mi">72</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"shareCount"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"commentCount"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"playCount"</span><span class="p">:</span><span class="mi">969</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+           </span><span class="nl">"duetInfo"</span><span class="p">:{</span><span class="w">
+              </span><span class="nl">"duetFromId"</span><span class="p">:</span><span class="s2">"0"</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+           </span><span class="nl">"warnInfo"</span><span class="p">:[</span><span class="w">
+
+           </span><span class="p">],</span><span class="w">
+           </span><span class="nl">"originalItem"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"officalItem"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"textExtra"</span><span class="p">:[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                 </span><span class="nl">"awemeId"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"start"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"end"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"hashtagId"</span><span class="p">:</span><span class="s2">"229207"</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"hashtagName"</span><span class="p">:</span><span class="s2">"fyp"</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"type"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"userId"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"isCommerce"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"userUniqueId"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+                 </span><span class="nl">"secUid"</span><span class="p">:</span><span class="s2">""</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+           </span><span class="p">],</span><span class="w">
+           </span><span class="nl">"secret"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"forFriend"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"digged"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"itemCommentStatus"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"showNotPass"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"vl1"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"takeDown"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"itemMute"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"effectStickers"</span><span class="p">:[</span><span class="w">
+
+           </span><span class="p">],</span><span class="w">
+           </span><span class="nl">"authorStats"</span><span class="p">:{</span><span class="w">
+              </span><span class="nl">"followerCount"</span><span class="p">:</span><span class="mi">89</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"followingCount"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"heart"</span><span class="p">:</span><span class="mi">3276</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"heartCount"</span><span class="p">:</span><span class="mi">3276</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"videoCount"</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"diggCount"</span><span class="p">:</span><span class="mi">1427</span><span class="w">
+           </span><span class="p">},</span><span class="w">
+           </span><span class="nl">"privateItem"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"duetEnabled"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"stitchEnabled"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"stickersOnItem"</span><span class="p">:[</span><span class="w">
+
+           </span><span class="p">],</span><span class="w">
+           </span><span class="nl">"isAd"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"shareEnabled"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"comments"</span><span class="p">:[</span><span class="w">
+
+           </span><span class="p">],</span><span class="w">
+           </span><span class="nl">"duetDisplay"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+           </span><span class="nl">"stitchDisplay"</span><span class="p">:</span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+     </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a tiktok creator&#39;s profile data.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://japi.rest/tiktok/v1/creator/:creator</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>creator</td>
+<td>true</td>
+<td>The creator username with @</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
