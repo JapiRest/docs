@@ -316,16 +316,30 @@
             <a href="#discord" class="toc-h1 toc-link" data-title="Discord">Discord</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-user" class="toc-h2 toc-link" data-title="Get User">Get User</a>
+                    <a href="#discord-user" class="toc-h2 toc-link" data-title="Discord User">Discord User</a>
                   </li>
                   <li>
-                    <a href="#get-user-avatar" class="toc-h2 toc-link" data-title="Get User Avatar">Get User Avatar</a>
+                    <a href="#discord-user-avatar" class="toc-h2 toc-link" data-title="Discord User Avatar">Discord User Avatar</a>
                   </li>
                   <li>
-                    <a href="#get-user-banner" class="toc-h2 toc-link" data-title="Get User Banner">Get User Banner</a>
+                    <a href="#discord-user-banner" class="toc-h2 toc-link" data-title="Discord User Banner">Discord User Banner</a>
                   </li>
                   <li>
-                    <a href="#get-template" class="toc-h2 toc-link" data-title="Get Template">Get Template</a>
+                    <a href="#discord-template" class="toc-h2 toc-link" data-title="Discord Template">Discord Template</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#japi-fetcher" class="toc-h1 toc-link" data-title="JAPI Fetcher">JAPI Fetcher</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#discord-user-presence" class="toc-h2 toc-link" data-title="Discord User Presence">Discord User Presence</a>
+                  </li>
+                  <li>
+                    <a href="#discord-guild" class="toc-h2 toc-link" data-title="Discord Guild">Discord Guild</a>
+                  </li>
+                  <li>
+                    <a href="#discord-guild-member" class="toc-h2 toc-link" data-title="Discord Guild Member">Discord Guild Member</a>
                   </li>
               </ul>
           </li>
@@ -403,6 +417,14 @@
               </ul>
           </li>
           <li>
+            <a href="#bombparty" class="toc-h1 toc-link" data-title="BombParty">BombParty</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-information" class="toc-h2 toc-link" data-title="List Information">List Information</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -423,7 +445,7 @@
 <!-- <aside class="warning">
   JAPI is still in early development and is not suitable for production environments!
 </aside> -->
-<h1 id='discord'>Discord</h1><h2 id='get-user'>Get User</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId"</span>
+<h1 id='discord'>Discord</h1><h2 id='discord-user'>Discord User</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user/:userId</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
@@ -440,12 +462,28 @@
     </span><span class="nl">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"49e7de8406d75a012d9add3b0383d428"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"discriminator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7757"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"public_flags"</span><span class="p">:</span><span class="w"> </span><span class="mi">131328</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"banner"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b1d92b8e931a1eaa5bd8ad6b1423851e"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"banner_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#19b9e6"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"accent_color"</span><span class="p">:</span><span class="w"> </span><span class="mi">1685990</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DanPlayz#7757"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-08-01T22:16:47.596Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"createdTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1470089807596</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"public_flags_array"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"HOUSE_BALANCE"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"EARLY_VERIFIED_BOT_DEVELOPER"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"defaultAvatarURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.discordapp.com/embed/avatars/2.png"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"avatarURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.discordapp.com/avatars/209796601357533184/49e7de8406d75a012d9add3b0383d428.png"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"bannerURL"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="nl">"bannerURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.discordapp.com/banners/209796601357533184/b1d92b8e931a1eaa5bd8ad6b1423851e.png"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"presence"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"online"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"activities"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"clientStatus"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"desktop"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"connections"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint retrieves a user&#39;s information.</p>
@@ -465,7 +503,7 @@
 <td>The user&#39;s ID.</td>
 </tr>
 </tbody></table>
-<h2 id='get-user-avatar'>Get User Avatar</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId/avatar"</span>
+<h2 id='discord-user-avatar'>Discord User Avatar</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId/avatar"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user/:userId/avatar</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
@@ -513,7 +551,7 @@
 <td>Changes the size of the image, same as discord.</td>
 </tr>
 </tbody></table>
-<h2 id='get-user-banner'>Get User Banner</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId/banner"</span>
+<h2 id='discord-user-banner'>Discord User Banner</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId/banner"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user/:userId/banner</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">url</span><span class="p">)</span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
@@ -561,7 +599,7 @@
 <td>Changes the size of the image, same as discord.</td>
 </tr>
 </tbody></table>
-<h2 id='get-template'>Get Template</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/template/:code"</span> <span class="se">\</span>
+<h2 id='discord-template'>Discord Template</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/template/:code"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/template/:code</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
@@ -625,6 +663,250 @@
 <td>code</td>
 <td>true</td>
 <td>The template code.</td>
+</tr>
+</tbody></table>
+<h1 id='japi-fetcher'>JAPI Fetcher</h1>
+<blockquote>
+<p>These endpoints are fetched via JAPI Fetcher.</p>
+
+<p>Invite it at https://bot.japi.rest/invite
+Get Support at https://bot.japi.rest/support</p>
+</blockquote>
+<h2 id='discord-user-presence'>Discord User Presence</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId/presence"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user/:userId/presence</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"209796601357533184"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DanPlayz"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"49e7de8406d75a012d9add3b0383d428"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"discriminator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7757"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"public_flags"</span><span class="p">:</span><span class="w"> </span><span class="mi">131328</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#19b9e6"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"accent_color"</span><span class="p">:</span><span class="w"> </span><span class="mi">1685990</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"avatarURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.discordapp.com/avatars/209796601357533184/49e7de8406d75a012d9add3b0383d428.png"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bannerURL"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a user&#39;s information.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://japi.rest/discord/v1/user/:userId</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userId</td>
+<td>true</td>
+<td>The user&#39;s ID.</td>
+</tr>
+</tbody></table>
+<h2 id='discord-guild'>Discord Guild</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/guild/733135938347073576"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/guild/733135938347073576</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"733135938347073576"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Void Bots"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a_aa6362876672e26c01edbe2cfb3f0dd5"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"COMMUNITY"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"VANITY_URL"</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"commands"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"members"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"209796601357533184"</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"733135938741600361"</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"bans"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"733135938351398956"</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"stageInstances"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"invites"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"shardId"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"splash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a9aa17893e693998c39b3c9f5c79d249"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"banner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b0217bdf6bb7dd2cebb47ffb59b13ea8"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Void Bots. Here you can find the perfect bot for your server, or add your bot!"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"verificationLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HIGH"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"vanityURLCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"voidbots"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"nsfwLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEFAULT"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"discoverySplash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bf283eb880fd266fb74eb164b066cbcd"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"memberCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">2029</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"large"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"applicationId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"afkTimeout"</span><span class="p">:</span><span class="w"> </span><span class="mi">900</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"afkChannelId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"systemChannelId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"749432519681900576"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"premiumTier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TIER_3"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"premiumSubscriptionCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"explicitContentFilter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ALL_MEMBERS"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"mfaLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ELEVATED"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"joinedTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1633366124703</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"defaultMessageNotifications"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ONLY_MENTIONS"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"systemChannelFlags"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"maximumMembers"</span><span class="p">:</span><span class="w"> </span><span class="mi">250000</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"maximumPresences"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"approximateMemberCount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"approximatePresenceCount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"vanityURLUses"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"rulesChannelId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"761339128343167057"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"publicUpdatesChannelId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"733135939127345227"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"preferredLocale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en-US"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ownerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"726243005438099577"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"emojis"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"733147957188362310"</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"stickers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"859875867144224818"</span><span class="p">,</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"createdTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1594863628709</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"nameAcronym"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VB"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"iconURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.discordapp.com/icons/733135938347073576/a_aa6362876672e26c01edbe2cfb3f0dd5.webp"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"splashURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.discordapp.com/splashes/733135938347073576/a9aa17893e693998c39b3c9f5c79d249.webp"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"discoverySplashURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.discordapp.com/discovery-splashes/733135938347073576/bf283eb880fd266fb74eb164b066cbcd.webp"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"bannerURL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.discordapp.com/banners/733135938347073576/b0217bdf6bb7dd2cebb47ffb59b13ea8.webp"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a guild&#39;s information.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://japi.rest/discord/v1/guild/:guildid</code></p>
+<h3 id='path-parameters-2'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>guildid</td>
+<td>true</td>
+<td>The guild id.</td>
+</tr>
+</tbody></table>
+<h2 id='discord-guild-member'>Discord Guild Member</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/guild/733135938347073576/members/209796601357533184"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/guild/733135938347073576/members/209796601357533184</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"guildId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"733135938347073576"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"joinedTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1594863628713</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"premiumSinceTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1627077775719</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"nickname"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"pending"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"209796601357533184"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DanPlayz"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"743980331274600459"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"👑"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#000000"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hoist"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"rawPosition"</span><span class="p">:</span><span class="w"> </span><span class="mi">86</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"managed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mentionable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"createdTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1597449133462</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"735302323835764767"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nitro Booster"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#ff73fa"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hoist"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"rawPosition"</span><span class="p">:</span><span class="w"> </span><span class="mi">58</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"managed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mentionable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"createdTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1595380135259</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"733884613578981376"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Member"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#b9bbbe"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hoist"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"rawPosition"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"managed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mentionable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"createdTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1595042126794</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"733135938347073576"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@everyone"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#000000"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"hoist"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"rawPosition"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"managed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"mentionable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"createdTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1594863628709</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a guild member&#39;s information.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://japi.rest/discord/v1/guild/:guildid/members/:memberid</code></p>
+<h3 id='path-parameters-3'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>guildid</td>
+<td>true</td>
+<td>The guild id.</td>
+</tr>
+<tr>
+<td>memberid</td>
+<td>true</td>
+<td>The member id.</td>
 </tr>
 </tbody></table>
 <h1 id='wikihow'>WikiHow</h1><h2 id='search'>Search</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/wikihow/v1/search?q=How+to+eat+food"</span> <span class="se">\</span>
@@ -2388,6 +2670,65 @@
 <td>creator</td>
 <td>true</td>
 <td>The creator username with @</td>
+</tr>
+</tbody></table>
+<h1 id='bombparty'>BombParty</h1><h2 id='list-information'>List Information</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/bombparty/v1/search?limit=5&amp;sort=lenlow&amp;q=dan"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">word</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">dan</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://japi.rest/bombparty/v1/search?limit=5&amp;sort=lenlow&amp;q=</span><span class="p">${</span><span class="nx">word</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"words"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"dan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dang"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dank"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dans"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dant"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a list of words based on the query.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://japi.rest/bombparty/v1/search</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>true</td>
+<td>null</td>
+<td>The word to search for</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>false</td>
+<td>20</td>
+<td>The number of words to return</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>false</td>
+<td>null</td>
+<td>The sort order of the words</td>
+</tr>
+<tr>
+<td>lowerCase</td>
+<td>false</td>
+<td>false</td>
+<td>Whether to return the words in lowercase</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
