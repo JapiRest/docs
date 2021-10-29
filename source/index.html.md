@@ -16,6 +16,7 @@ includes:
   - pcpartpicker
   - japipresence
   - tiktok
+  - bombparty
   - errors
 
 search: true
