@@ -1,6 +1,6 @@
 # Discord
 
-## Get User
+## Discord User
 
 ```shell
 curl "https://japi.rest/discord/v1/user/:userId"
@@ -24,12 +24,28 @@ console.log(data);
     "avatar": "49e7de8406d75a012d9add3b0383d428",
     "discriminator": "7757",
     "public_flags": 131328,
-    "banner": null,
+    "banner": "b1d92b8e931a1eaa5bd8ad6b1423851e",
     "banner_color": "#19b9e6",
     "accent_color": 1685990,
+    "tag": "DanPlayz#7757",
+    "createdAt": "2016-08-01T22:16:47.596Z",
+    "createdTimestamp": 1470089807596,
+    "public_flags_array": [
+      "HOUSE_BALANCE",
+      "EARLY_VERIFIED_BOT_DEVELOPER"
+    ],
+    "defaultAvatarURL": "https://cdn.discordapp.com/embed/avatars/2.png",
     "avatarURL": "https://cdn.discordapp.com/avatars/209796601357533184/49e7de8406d75a012d9add3b0383d428.png",
-    "bannerURL": null,
-  }
+    "bannerURL": "https://cdn.discordapp.com/banners/209796601357533184/b1d92b8e931a1eaa5bd8ad6b1423851e.png"
+  },
+  "presence": {
+    "status": "online",
+    "activities": [],
+    "clientStatus": [
+      "desktop"
+    ]
+  },
+  "connections": {}
 }
 ```
 
@@ -45,7 +61,7 @@ Parameter | Required | Description
 --------- | -------- | -----------
 userId    | true     | The user's ID.
 
-## Get User Avatar
+## Discord User Avatar
 
 ```shell
 curl "https://japi.rest/discord/v1/user/:userId/avatar"
@@ -78,7 +94,7 @@ Parameter | Required | Default | Description
 animated  | false    | false   | Returns the avatar as gif if available.
 size      | false    | 128     | Changes the size of the image, same as discord.
 
-## Get User Banner
+## Discord User Banner
 
 ```shell
 curl "https://japi.rest/discord/v1/user/:userId/banner"
@@ -112,7 +128,7 @@ animated  | false    | false   | Returns the avatar as gif if available.
 size      | false    | 128     | Changes the size of the image, same as discord.
 
 
-## Get Template
+## Discord Template
 
 ```shell
 curl "https://japi.rest/discord/v1/template/:code" \

@@ -10,6 +10,7 @@ toc_footers:
 
 includes:
   - discord
+  - japifetcher
   - wikihow
   - mywaifulist
   - pcpartpicker
