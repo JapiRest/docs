@@ -1,9 +1,11 @@
 # JAPI Fetcher
 
-> These endpoints are fetched via JAPI Fetcher.
->
-> Invite it at https://bot.japi.rest/invite
-> Get Support at https://bot.japi.rest/support
+<aside class="info">
+  These endpoints are fetched via JAPI Fetcher.
+  
+  Invite it at https://bot.japi.rest/invite
+  Get Support at https://bot.japi.rest/support
+</aside>
 
 ## Discord User Presence
 
