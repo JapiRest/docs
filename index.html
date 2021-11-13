@@ -666,12 +666,12 @@
 </tr>
 </tbody></table>
 <h1 id='japi-fetcher'>JAPI Fetcher</h1>
-<blockquote>
-<p>These endpoints are fetched via JAPI Fetcher.</p>
-
-<p>Invite it at https://bot.japi.rest/invite
-Get Support at https://bot.japi.rest/support</p>
-</blockquote>
+<aside class="info">
+  These endpoints are fetched via JAPI Fetcher.
+  
+  Invite it at https://bot.japi.rest/invite
+  Get Support at https://bot.japi.rest/support
+</aside>
 <h2 id='discord-user-presence'>Discord User Presence</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/user/:userId/presence"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/user/:userId/presence</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
 
