@@ -327,6 +327,9 @@
                   <li>
                     <a href="#discord-template" class="toc-h2 toc-link" data-title="Discord Template">Discord Template</a>
                   </li>
+                  <li>
+                    <a href="#discord-application" class="toc-h2 toc-link" data-title="Discord Application">Discord Application</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -663,6 +666,81 @@
 <td>code</td>
 <td>true</td>
 <td>The template code.</td>
+</tr>
+</tbody></table>
+<h2 id='discord-application'>Discord Application</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/discord/v1/application/:applicationId"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://japi.rest/discord/v1/application/:applicationId</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"application"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"587152333519978559"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Primo"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"747655dc3da9f544a87bb85d616e4520"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Primo was crafted to be useable by anyone, so you never have a boring moment on discord with (or without) your friends!</span><span class="se">\n\n</span><span class="s2">Website: https://primo.enx.so</span><span class="se">\n</span><span class="s2">Invite: https://primo.enx.so/invite"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Primo was crafted to be useable by anyone, so you never have a boring moment on discord with (or without) your friends!</span><span class="se">\n\n</span><span class="s2">Website: https://primo.enx.so</span><span class="se">\n</span><span class="s2">Invite: https://primo.enx.so/invite"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"hook"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bot_public"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bot_require_code_grant"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"terms_of_service_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://primo.enx.so/terms"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"privacy_policy_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://primo.enx.so/privacy"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"custom_install_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://discord.com/oauth2/authorize?client_id=587152333519978559&amp;permissions=2147482871&amp;redirect_uri=http%3A%2F%2Fprimo.enx.so%2Fcallback&amp;response_type=code&amp;scope=bot%20identify%20guilds%20applications.commands"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"verify_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9553417d309f6fce0b84a761c14b9a9a4694ba6834bb0e3533385b6ab14ba81a"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"flags"</span><span class="p">:</span><span class="w"> </span><span class="mi">323584</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"fun"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"logging"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"moderation"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"social"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"utility"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"flags_array"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"GATEWAY_PRESENCE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"GATEWAY_PRESENCE_LIMITED"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"GATEWAY_GUILD_MEMBERS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"GATEWAY_GUILD_MEMBERS_LIMITED"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"GATEWAY_MESSAGE_CONTENT"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"bot"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"587152333519978559"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Primo"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"068c34bbc2357ee9c742c4c38ead9d4e"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"discriminator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5049"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"public_flags"</span><span class="p">:</span><span class="w"> </span><span class="mi">65536</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bot"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"approximate_guild_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">265</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"public_flags_array"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"VERIFIED_BOT"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a user&#39;s information.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://japi.rest/discord/v1/application/:applicationId</code></p>
+<h3 id='path-parameters-5'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>applicationId</td>
+<td>true</td>
+<td>The application&#39;s ID. (A bot ID is a valid application ID)</td>
 </tr>
 </tbody></table>
 <h1 id='japi-fetcher'>JAPI Fetcher</h1>
