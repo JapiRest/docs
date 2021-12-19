@@ -196,3 +196,81 @@ This endpoint retrieves a template's information.
 Parameter | Required | Description
 --------- | -------- | -----------
 code      | true     | The template code.
+
+## Discord Application
+
+```shell
+curl "https://japi.rest/discord/v1/application/:applicationId"
+```
+
+```javascript
+const data = fetch("https://japi.rest/discord/v1/application/:applicationId").then(res => res.json())
+
+console.log(data);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "cache_expiry": 3600,
+  "cached": false,
+  "data": {
+    "application": {
+      "id": "587152333519978559",
+      "name": "Primo",
+      "icon": "747655dc3da9f544a87bb85d616e4520",
+      "description": "Primo was crafted to be useable by anyone, so you never have a boring moment on discord with (or without) your friends!\n\nWebsite: https://primo.enx.so\nInvite: https://primo.enx.so/invite",
+      "summary": "Primo was crafted to be useable by anyone, so you never have a boring moment on discord with (or without) your friends!\n\nWebsite: https://primo.enx.so\nInvite: https://primo.enx.so/invite",
+      "type": null,
+      "hook": true,
+      "bot_public": true,
+      "bot_require_code_grant": false,
+      "terms_of_service_url": "https://primo.enx.so/terms",
+      "privacy_policy_url": "https://primo.enx.so/privacy",
+      "custom_install_url": "https://discord.com/oauth2/authorize?client_id=587152333519978559&permissions=2147482871&redirect_uri=http%3A%2F%2Fprimo.enx.so%2Fcallback&response_type=code&scope=bot%20identify%20guilds%20applications.commands",
+      "verify_key": "9553417d309f6fce0b84a761c14b9a9a4694ba6834bb0e3533385b6ab14ba81a",
+      "flags": 323584,
+      "tags": [
+        "fun",
+        "logging",
+        "moderation",
+        "social",
+        "utility"
+      ],
+      "flags_array": [
+        "GATEWAY_PRESENCE",
+        "GATEWAY_PRESENCE_LIMITED",
+        "GATEWAY_GUILD_MEMBERS",
+        "GATEWAY_GUILD_MEMBERS_LIMITED",
+        "GATEWAY_MESSAGE_CONTENT"
+      ],
+      "assets": []
+    },
+    "bot": {
+      "id": "587152333519978559",
+      "username": "Primo",
+      "avatar": "068c34bbc2357ee9c742c4c38ead9d4e",
+      "discriminator": "5049",
+      "public_flags": 65536,
+      "bot": true,
+      "approximate_guild_count": 265,
+      "public_flags_array": [
+        "VERIFIED_BOT"
+      ]
+    }
+  }
+}
+```
+
+This endpoint retrieves a user's information.
+
+### HTTP Request
+
+`GET https://japi.rest/discord/v1/application/:applicationId`
+
+### Path Parameters
+
+Parameter | Required | Description
+--------- | -------- | -----------
+applicationId    | true     | The application's ID. (A bot ID is a valid application ID)
