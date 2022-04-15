@@ -17,6 +17,7 @@ includes:
   - japipresence
   - tiktok
   - bombparty
+  - minecraft
   - errors
 
 search: true
