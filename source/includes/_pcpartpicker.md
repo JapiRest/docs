@@ -11,9 +11,7 @@ curl "https://japi.rest/pcpartpicker/v1/list/fGWxfH" \
 const partId = 'fGWxfH';
 const data = fetch(`https://japi.rest/pcpartpicker/v1/list/${partId}`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:

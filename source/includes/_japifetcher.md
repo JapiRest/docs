@@ -14,9 +14,7 @@ curl "https://japi.rest/discord/v1/user/:userId/presence"
 ```
 
 ```javascript
-const data = fetch("https://japi.rest/discord/v1/user/:userId/presence").then(res => res.json())
-
-console.log(data);
+const data = fetch("https://japi.rest/discord/v1/user/:userId/presence").then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -62,9 +60,7 @@ curl "https://japi.rest/discord/v1/guild/733135938347073576" \
 ```javascript
 const data = fetch("https://japi.rest/discord/v1/guild/733135938347073576", {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -163,9 +159,7 @@ curl "https://japi.rest/discord/v1/guild/733135938347073576/members/209796601357
 ```javascript
 const data = fetch("https://japi.rest/discord/v1/guild/733135938347073576/members/209796601357533184", {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:

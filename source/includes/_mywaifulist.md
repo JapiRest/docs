@@ -11,9 +11,7 @@ curl "https://japi.rest/mywaifulist/v1/waifu/sylvie-4" \
 const waifuName = 'sylvie-4';
 const data = fetch(`https://japi.rest/mywaifulist/v1/waifu/${waifuName}`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -108,9 +106,7 @@ curl "https://japi.rest/mywaifulist/v1/waifu/random" \
 ```javascript
 const data = fetch(`https://japi.rest/mywaifulist/v1/waifu/random`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -200,9 +196,7 @@ curl "https://japi.rest/mywaifulist/v1/series?q=village" \
 const seriesSearch = 'village';
 const data = fetch(`https://japi.rest/mywaifulist/v1/series?q=${seriesSearch}`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -316,9 +310,7 @@ curl "https://japi.rest/mywaifulist/v1/series/the-lost-village" \
 const seriesName = 'the-lost-village';
 const data = fetch(`https://japi.rest/mywaifulist/v1/series/${seriesName}`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -468,9 +460,7 @@ curl "https://japi.rest/mywaifulist/v1/best" \
 ```javascript
 const data = fetch(`https://japi.rest/mywaifulist/v1/best`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -585,9 +575,7 @@ curl "https://japi.rest/mywaifulist/v1/popular" \
 ```javascript
 const data = fetch(`https://japi.rest/mywaifulist/v1/popular`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -667,9 +655,7 @@ curl "https://japi.rest/mywaifulist/v1/trash" \
 ```javascript
 const data = fetch(`https://japi.rest/mywaifulist/v1/trash`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -739,9 +725,7 @@ curl "https://japi.rest/mywaifulist/v1/vtubers" \
 ```javascript
 const data = fetch(`https://japi.rest/mywaifulist/v1/vtubers`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -816,9 +800,7 @@ curl "https://japi.rest/mywaifulist/v1/current/best" \
 ```javascript
 const data = fetch(`https://japi.rest/mywaifulist/v1/current/best`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -928,9 +910,7 @@ curl "https://japi.rest/mywaifulist/v1/current/trash" \
 ```javascript
 const data = fetch(`https://japi.rest/mywaifulist/v1/current/trash`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -1040,9 +1020,7 @@ curl "https://japi.rest/mywaifulist/v1/current/popular" \
 ```javascript
 const data = fetch(`https://japi.rest/mywaifulist/v1/current/popular`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:

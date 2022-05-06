@@ -7,9 +7,7 @@ curl "https://japi.rest/presence/v1/get?id=209796601357533184"
 ```
 
 ```javascript
-const data = fetch("https://japi.rest/presence/v1/get?id=209796601357533184").then(res => res.json())
-
-console.log(data);
+const data = fetch("https://japi.rest/presence/v1/get?id=209796601357533184").then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:

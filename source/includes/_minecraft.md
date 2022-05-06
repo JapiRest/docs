@@ -11,9 +11,7 @@ curl "https://japi.rest/minecraft/v1/username/DanPlayz" \
 const username = 'DanPlayz';
 const data = fetch(`https://japi.rest/minecraft/v1/username/${username}`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
@@ -52,9 +50,7 @@ curl "https://japi.rest/minecraft/v1/uuid/41f9049d58204631b8aa18f8397ba5c1" \
 const username = '41f9049d58204631b8aa18f8397ba5c1';
 const data = fetch(`https://japi.rest/minecraft/v1/uuid/${username}`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:

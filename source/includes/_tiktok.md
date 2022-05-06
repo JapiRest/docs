@@ -11,9 +11,7 @@ curl "https://japi.rest/tiktok/v1/creator/@dumcrap" \
 const creator = 'dumcrap';
 const data = fetch(`https://japi.rest/tiktok/v1/creator/@${creator}`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:

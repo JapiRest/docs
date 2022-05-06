@@ -11,9 +11,7 @@ curl "https://japi.rest/bombparty/v1/search?limit=5&sort=lenlow&q=dan" \
 const word = 'dan';
 const data = fetch(`https://japi.rest/bombparty/v1/search?limit=5&sort=lenlow&q=${word}`, {
   headers: { "Authorization": "{API KEY}" }
-}).then(res => res.json())
-
-console.log(data);
+}).then(res => res.json()).then(data => console.log(data));
 ```
 
 > The above command returns JSON structured like this:
