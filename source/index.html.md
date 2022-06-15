@@ -15,8 +15,8 @@ includes:
   - mywaifulist
   - pcpartpicker
   - japipresence
-  - tiktok
   - bombparty
+  - wordle
   - minecraft
   - errors
 
