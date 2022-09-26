@@ -436,9 +436,6 @@
                   <li>
                     <a href="#mc-username-from-uuid" class="toc-h2 toc-link" data-title="MC Username from UUID">MC Username from UUID</a>
                   </li>
-                  <li>
-                    <a href="#past-mc-usernames" class="toc-h2 toc-link" data-title="Past MC Usernames">Past MC Usernames</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -2660,63 +2657,6 @@
 <td>uuid</td>
 <td>true</td>
 <td>The UUID of the player to get the username of</td>
-</tr>
-</tbody></table>
-<h2 id='past-mc-usernames'>Past MC Usernames</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://japi.rest/minecraft/v1/history/DanPlayz"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
-
-curl <span class="s2">"https://japi.rest/minecraft/v1/history/41f9049d58204631b8aa18f8397ba5c1"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: {API KEY}"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">username</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">DanPlayz</span><span class="dl">'</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">data1</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://japi.rest/minecraft/v1/history/</span><span class="p">${</span><span class="nx">username</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="p">{</span>
-  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
-<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data1</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">uuid</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">41f9049d58204631b8aa18f8397ba5c1</span><span class="dl">'</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">data2</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`https://japi.rest/minecraft/v1/history/</span><span class="p">${</span><span class="nx">uuid</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="p">{</span>
-  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">{API KEY}</span><span class="dl">"</span> <span class="p">}</span>
-<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"cache_expiry"</span><span class="p">:</span><span class="w"> </span><span class="mi">10800</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cached"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Danny2362"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DanPlayz0"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"changedToAt"</span><span class="p">:</span><span class="w"> </span><span class="mi">1479519567000</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DanPlayz"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"changedToAt"</span><span class="p">:</span><span class="w"> </span><span class="mi">1559446388000</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves the past usernames for a uuid (or username) from mojang.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://japi.rest/minecraft/v1/history/:player</code></p>
-<h3 id='path-parameters-3'>Path Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>player</td>
-<td>true</td>
-<td>The UUID (or username) of the player to get the past usernames of</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
