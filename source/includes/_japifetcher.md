@@ -42,7 +42,7 @@ This endpoint retrieves a user's information.
 
 ### HTTP Request
 
-`GET https://japi.rest/discord/v1/user/:userId`
+`GET https://japi.rest/discord/v1/user/:userId/presence`
 
 ### Path Parameters
 
