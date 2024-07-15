@@ -12,11 +12,8 @@ includes:
   - discord
   - japifetcher
   - wikihow
-  - mywaifulist
-  - pcpartpicker
   - japipresence
   - bombparty
-  - wordle
   - minecraft
   - errors
 
